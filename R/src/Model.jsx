@@ -39,7 +39,7 @@ const Model = () => {
         ref={modelRef} 
         scale={0.09} 
       />
-      <OrbitControls enableZoom={false} enablePan={true} />
+      <OrbitControls enableZoom={false} enablePan={true} enableRotate={false} />
       <Preload all />
     </>
   );
