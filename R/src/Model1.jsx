@@ -61,6 +61,7 @@ const Model1 = () => {
         <OrbitControls 
         enableZoom={false}
         enablePan={false}
+        enableRotate={false}
         
         />
         <Preload all />
