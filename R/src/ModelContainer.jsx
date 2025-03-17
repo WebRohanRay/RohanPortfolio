@@ -18,9 +18,7 @@ const ModelContainer = () => {
     >
       <Canvas
         style={{ 
-          height: '100%', 
-          width: '100%', 
-          border: '1px solid black' 
+          
         }}
         camera={{
           position: [1, 5, 10],

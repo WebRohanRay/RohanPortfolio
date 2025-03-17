@@ -1,21 +1,32 @@
-import React from 'react';
+import React from "react";
 
 const ProjectCard = ({ project }) => {
   return (
+    <div className="flex flex-wrap text-white py-6 px-10 sm:px-40 gap-4 
+        bg-white bg-opacity-10 backdrop-blur-lg rounded-xl border border-gray-700
+        hover:shadow-[0_4px_30px_rgba(99,102,241,0.4)] hover:border-blue-400 
+        transition-all duration-300">
 
-    <div className='flex flex-wrap text-white py-6 px-10 sm:px-40 gap-4 bg-white bg-opacity-10 rounded-lg'>
-      <div className='flex-grow'>
-        <h2 className='text-white text-xl'>{project.title}</h2>
-        <p><span className="font-bold">Description:</span> {project.description}</p>
-        <p><span className="font-bold">TechStack Used: </span><br />{project.techStack.join(', ')}</p>
+      {/* Project Details */}
+      <div className="flex-grow">
+        <h2 className="text-xl font-bold text-white">{project.title}</h2>
+        <p className="text-gray-300"><span className="font-bold text-white">Description:</span> {project.description}</p>
+        <p className="text-gray-300"><span className="font-bold text-white">TechStack Used:</span> <br />{project.techStack.join(", ")}</p>
       </div>
+
+      {/* Image & Button */}
       <div className="flex-shrink-0 text-center">
-        <div className="w-32 h-32 bg-white rounded-lg"></div> 
-        <button className="mt-2 bg-secondary text-white px-4 py-2 rounded-lg">
-          <a href={project.demoLink} target="_blank" rel="noreferrer" className="text-blue-500">
+        <div className="w-32 h-32 bg-gray-900 border border-gray-600 rounded-lg flex items-center justify-center text-gray-500">
+          📷 Image
+        </div>
+
+        {/* Animated Button */}
+        <a href={project.demoLink} target="_blank" rel="noreferrer">
+          <button className="mt-2 bg-blue-500 text-white px-4 py-2 rounded-lg transition-all duration-300 
+              hover:scale-105 hover:shadow-lg hover:bg-blue-600">
             Demo Link
-          </a>
-        </button>
+          </button>
+        </a>
       </div>
     </div>
   );
