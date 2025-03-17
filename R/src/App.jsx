@@ -21,7 +21,7 @@ const App = () => {
           ],
         }}
         transition={{
-          duration: 6,
+          duration: 4,  // ✅ Reduced duration to make it more dynamic
           repeat: Infinity,
           ease: "linear",
         }}
@@ -30,7 +30,7 @@ const App = () => {
         <motion.div
           className="absolute inset-0 bg-transparent pointer-events-none"
           animate={{ backgroundPosition: ["0px 0px", "40px 40px"] }}
-          transition={{ repeat: Infinity, duration: 5, ease: "linear" }}
+          transition={{ repeat: Infinity, duration: 4, ease: "linear" }}
         >
           <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:80px_80px] opacity-10"></div>
         </motion.div>
@@ -38,55 +38,51 @@ const App = () => {
         {/* Main Content */}
         <div className="relative flex flex-col z-10 pt-20">
           {/* Navbar */}
-          <motion.div 
-            initial={{ opacity: 0 }} 
-            animate={{ opacity: 1 }} 
-            transition={{ duration: 1 }}
-          >
+         
             <Navbar />
-          </motion.div>
+        
 
-          {/* Hero Section - Ultra Smooth */}
+          {/* Hero Section - Optimized for Speed & Smoothness */}
           <motion.div 
             className="top-[20px] will-change-transform will-change-opacity"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.8, ease: "easeInOut" }} // ✅ Long smooth ease-in-out
+            initial={{ opacity: 0, y: 30, scale: 0.98 }} // ✅ Prevents pop-in effect
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }} // ✅ Faster yet smooth
           >
             <Hero />
           </motion.div>
         </div>
 
-        {/* Model Section - Smooth Scroll Animation */}
+        {/* Model Section - Improved Scroll Performance */}
         <div className="relative sm:mx-20 mt-0">
           <motion.div
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1.5, ease: "easeInOut" }}
-            viewport={{ once: false, amount: 0.5 }} // ✅ Fixes jumpy animation
+            initial={{ y: 80, opacity: 0, scale: 0.95 }} // ✅ Makes it load faster
+            whileInView={{ y: 0, opacity: 1, scale: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }} 
+            viewport={{ once: false, amount: 0.3 }} // ✅ Triggers sooner
             className="will-change-transform will-change-opacity"
           >
             <ModelContainer className="w-full h-full" />
           </motion.div>
         </div>
 
-        {/* Overview Section - Smooth Scroll Animation */}
+        {/* Overview Section - Better Performance */}
         <motion.div
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
-          viewport={{ once: false, amount: 0.5 }} // ✅ Prevents flickering
+          initial={{ y: 80, opacity: 0, scale: 0.95 }}
+          whileInView={{ y: 0, opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.3 }}
           className="will-change-transform will-change-opacity"
         >
           <Overview />
         </motion.div>
 
-        {/* Work Section - Smooth Scroll Animation */}
+        {/* Work Section - Instant Smoothness */}
         <motion.div
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
-          viewport={{ once: false, amount: 0.5 }} // ✅ Improves smoothness
+          initial={{ y: 80, opacity: 0, scale: 0.95 }}
+          whileInView={{ y: 0, opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.3 }}
           className="will-change-transform will-change-opacity"
         >
           <Work />

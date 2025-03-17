@@ -71,7 +71,7 @@ const Hero = () => {
       >
         {/* Hero Content */}
         <motion.div
-          className="text-center py-8 px-36 sm:px-40 relative z-10"
+          className="text-center py-8 px-6 sm:px-5 relative z-10"
           whileHover={{ scale: 1.01, boxShadow: "0px 5px 20px rgba(99,102,241,0.2)" }} // ✅ Softer hover effect
           transition={{ duration: 0.3 }}
         >
