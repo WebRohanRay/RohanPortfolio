@@ -5,36 +5,36 @@ import ContactForm from "./ContactForm";
 const Contact = () => {
   return (
     <div className="flex items-center flex-col py-6 px-10 sm:px-40">
-      {/* Title with animation */}
+      {/* Title with Faster Animation */}
       <motion.h1 
         className="text-center text-6xl text-white"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        transition={{ duration: 0.5, ease: "easeOut" }}  // Reduced duration
         viewport={{ once: false, amount: 0.3 }}
       >
         Contact Me
       </motion.h1>
 
-      <div className="flex flex-col items-center justify-center mt-6 w-full max-w-4xl gap-12">
-        {/* Animated Contact Form */}
+      <div className="flex flex-col items-center justify-center mt-6 w-full max-w-4xl gap-8">
+        {/* Faster Animated Contact Form with Blue Shadow */}
         <motion.div
-          className="w-full max-w-lg p-6 rounded-lg bg-gray-900 shadow-lg"
+          className="w-full max-w-lg p-6 bg-gradient-to-br from-[#121212] to-[#1a1a1a]"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}  // Reduced duration
           viewport={{ once: false, amount: 0.3 }}
-          whileHover={{ scale: 1.02, boxShadow: "0px 0px 15px rgba(255,255,255,0.3)" }}
+          whileHover={{ scale: 1.05, boxShadow: "0px 0px 20px rgba(0, 123, 255, 0.5)" }} // Blue shadow
         >
           <ContactForm />
         </motion.div>
 
-        {/* Social Icons in Flex Row with animation */}
+        {/* Faster Animated Social Icons with Blue Shadows */}
         <motion.div
           className="flex flex-row items-center justify-center gap-6"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}  // Reduced duration and delay
           viewport={{ once: false, amount: 0.3 }}
         >
           {[
@@ -48,8 +48,8 @@ const Contact = () => {
               href={icon.href}
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.2, boxShadow: "0px 0px 15px rgba(255,255,255,0.5)" }}
-              transition={{ duration: 0.3 }}
+              whileHover={{ scale: 1.3, boxShadow: "0px 0px 20px rgba(0, 123, 255, 0.6)" }} // Blue shadow
+              transition={{ duration: 0.2 }}  // Faster hover effect
             >
               <img width="50" height="50" src={icon.img} alt={icon.alt} />
             </motion.a>

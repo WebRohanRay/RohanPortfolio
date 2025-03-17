@@ -40,7 +40,7 @@ const ContactForm = () => {
 
   return (
     <motion.div 
-      className="max-w-lg mx-auto p-6 bg-gray-900 text-white rounded-lg shadow-lg"
+      className="max-w-lg mx-auto p-6 bg-gradient-to-br from-[#121212] to-[#1a1a1a] text-white rounded-lg shadow-lg"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -80,13 +80,13 @@ const ContactForm = () => {
           className="w-full p-3 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         ></textarea>
 
-        {/* Submit Button */}
+        {/* Compact Submit Button */}
         <button
           type="submit"
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition-all duration-300"
+          className="bg-gray-600 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded-md transition-all duration-300"
           disabled={loading}
         >
-          {loading ? "Sending..." : "Send Message"}
+          {loading ? "Sending..." : "Send"}
         </button>
       </form>
 
