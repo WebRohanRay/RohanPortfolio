@@ -13,7 +13,7 @@ const App = () => {
   return (
     <BrowserRouter>
       {/* Static Background with Grid Overlay */}
-      <div className="relative min-h-screen overflow-hidden bg-[#0f0f0f]">
+      <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#121212] to-[#1a1a1a]">
         {/* Static Grid Overlay */}
         <div className="absolute inset-0 bg-transparent pointer-events-none">
           <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:80px_80px] opacity-10"></div>
